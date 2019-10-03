@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>lime forum</title>
+	<style>
+		/*초기화*/
+		body, ul, li, p, h1, a, div {margin: 0; padding: 0;}
+		a {text-decoration: none;}
+		ul li {list-style: none;}
+		/*전체적인 위치*/
+		body {width: 100%; text-align: center; background-color: #00FF71;}
+		#wrap {margin: 10px auto; width: 960px; min-height: 100%; background-color: white; border: 1px solid white;}
+		/*메인헤더*/
+		#main_header {background-color: #8BFF00;}
+		/*메인헤더 로고쪽*/
+		#main_header hgroup {padding: 20px 0 0 360px;}
+		#main_header hgroup h1 {height: 50px;background: url(lime_logo.png) no-repeat; text-indent: -9999em;}
+		#main_header hgroup p {display:block;text-align: left;}
+		/*메인헤더 로그인&회원가입*/
+		#main_header ul {float: right; margin: 10px;}
+		#main_header ul li {float: left;}
+		#main_header ul li a {color: black;}
+		#main_header .login {padding-right: 8px;border-right: 1px solid black;}
+		#main_header .join {padding-left: 8px;border-left: 1px solid black;}
+		/*메인 메뉴바*/
+		#main_menu ul li a{display:block; width: 25%; float: left; height: 25px; background:#CEFF00; height: 50px; line-height: 50px; color: green;}
+		#main_menu ul li a:hover {color:#CEFF00; background-color: #00E100;}
+		#slider_img{
+			text-align: center;
+			width: 600px;
+			height: 350px;
+		}
+	</style>
+	<script>
+		var a = ['pic1.jpg','pic2.jpg','pic3.jpg'];
+		var i = 0;
+		setInterval(function(){
+			var b = document.getElementById('slider_img');
+			b.src = a[i];
+			i++;
+			if (i==3) {
+				i=0;
+			}
+
+		},1000)
+		
+	</script>
+</head>
+<body>
+	<div id="wrap">
+		<header id="main_header">
+			<ul>
+				<li><a href="./login.html" class="login">login</a></li>
+				<li><a href="./join.html" class="join">join</a></li>
+			</ul>
+			<hgroup>
+			<h1>lime_forum_logo</h1>
+			<p>라임 포럼에 오신것을 환영해요 ^.^</p>
+			</hgroup>
+			
+		</header>
+		<nav id="main_menu">
+			<ul>
+				<li><a href="">메인</a></li>
+				<li><a href="">커뮤니티</a></li>
+				<li><a href="">자료실</a></li>
+				<li><a href="">정보 검색</a></li>
+			</ul>
+		</nav>
+		<img src="pic1.jpg" alt="" id="slider_img">
+		<script>
+			
+		</script>
+	</div>
+</body>
+</html>
